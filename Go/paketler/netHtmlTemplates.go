@@ -1,10 +1,11 @@
 package main
 
 import (
-	"errHandler"
 	"fmt"
 	"io"
 	"net/http"
+
+	"github.com/raifpy/Go/errHandler"
 )
 
 //Web ...
@@ -18,5 +19,5 @@ func main() {
 	//http.HandleFunc("/favicon.ico", Web)
 	//http.HandleFunc("/gorsel.png", Web)
 	//errHandler.HandlerAndExit(http.ListenAndServe(":8080", http.FileServer(http.Dir("/"))))
-	errHandler.HandlerAndBool(http.ErrAbortHandler)
+	errHandler.HandlerBool(http.ErrAbortHandler)
 }

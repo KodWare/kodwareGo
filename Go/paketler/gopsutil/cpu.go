@@ -18,7 +18,7 @@ func main() {
 	fmt.Println("Kullanım = %", persent[0], "\n") //
 	ortalama(info)
 
-	/*for core, cp := range info {
+	for core, cp := range info {
 		// her çekirdek için yeni bir []
 		fmt.Println("Core = ", core)
 		fmt.Println("CPU     : ", cp.CPU)
@@ -34,7 +34,7 @@ func main() {
 		fmt.Println()
 
 		fmt.Println()
-	}*/
+	}
 
 }
 

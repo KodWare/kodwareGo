@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"errHandler"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -10,10 +9,10 @@ import (
 
 func main() {
 	apiurl := "http://ip-api.com/json" // http olacak
-	ham, err := http.Get(apiurl)
-	errHandler.HandlerExit(err)
-	ham2, err := ioutil.ReadAll(ham.Body)
-	errHandler.HandlerExit(err)
+	ham, _ := http.Get(apiurl)
+	//errHandler.HandlerExit(err)
+	ham2, _ := ioutil.ReadAll(ham.Body)
+	//errHandler.HandlerExit(err)
 	html := string(ham2)
 	//errHandler.HandlerExit(err)
 	fmt.Println(html)
